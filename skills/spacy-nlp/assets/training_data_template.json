@@ -1,0 +1,47 @@
+{
+  "_comment": "Training data template for spaCy text classification",
+  "_format": "JSON array of objects with 'text' and 'label' (single-label) or 'labels' (multi-label)",
+  "_usage": "python scripts/prepare_training_data.py --input training_data.json",
+  
+  "single_label_examples": [
+    {"text": "Quarterly revenue exceeded expectations by 15%", "label": "Business"},
+    {"text": "Customer acquisition cost analysis report", "label": "Business"},
+    {"text": "Stakeholder meeting for Q4 budget review", "label": "Business"},
+    {"text": "Market expansion strategy for APAC region", "label": "Business"},
+    {"text": "ROI analysis for new product launch", "label": "Business"},
+    
+    {"text": "Cloud migration to AWS infrastructure", "label": "Technology"},
+    {"text": "Database performance optimization needed", "label": "Technology"},
+    {"text": "API gateway configuration for load balancing", "label": "Technology"},
+    {"text": "Microservices architecture design document", "label": "Technology"},
+    {"text": "Network security audit findings", "label": "Technology"},
+    
+    {"text": "Refactored authentication module using JWT", "label": "Programming"},
+    {"text": "Fixed null pointer exception in parser", "label": "Programming"},
+    {"text": "Added unit tests for payment gateway", "label": "Programming"},
+    {"text": "Code review for pull request 234", "label": "Programming"},
+    {"text": "Implemented async/await pattern for API calls", "label": "Programming"},
+    
+    {"text": "Kubernetes deployment manifest updated", "label": "DevOps"},
+    {"text": "CI/CD pipeline setup with GitHub Actions", "label": "DevOps"},
+    {"text": "Docker container optimization reduced image size", "label": "DevOps"},
+    {"text": "Terraform modules for AWS infrastructure", "label": "DevOps"},
+    {"text": "Prometheus monitoring setup complete", "label": "DevOps"}
+  ],
+  
+  "multi_label_examples": [
+    {"text": "Customer billing system down - need urgent fix", "labels": ["customer", "billing", "urgent"]},
+    {"text": "Technical documentation update for API v2", "labels": ["technical", "documentation"]},
+    {"text": "Urgent security patch for production server", "labels": ["urgent", "technical", "security"]},
+    {"text": "New feature request from enterprise client", "labels": ["customer", "feature_request"]},
+    {"text": "Routine maintenance scheduled for weekend", "labels": ["technical", "maintenance"]}
+  ],
+  
+  "_best_practices": {
+    "minimum_examples_per_class": 50,
+    "recommended_examples_per_class": 100,
+    "class_balance": "Keep within 1:10 ratio",
+    "text_length": "Match production data distribution",
+    "label_quality": "Manual review recommended"
+  }
+}

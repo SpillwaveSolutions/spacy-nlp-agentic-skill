@@ -1,0 +1,34 @@
+{
+  "name": "spacy-nlp-agentic-skill",
+  "owner": {
+    "name": "Richard Hightower",
+    "email": "rick@spillwave.com"
+  },
+  "metadata": {
+    "description": "Industrial-strength NLP with spaCy 3.x for text processing and classification",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "spacy-nlp",
+      "description": "Industrial-strength NLP with spaCy 3.x for text processing and custom classifier training. Use when: installing spaCy, selecting models (en_core_web_sm/md/lg/trf), tokenization, POS tagging, named entity recognition, dependency parsing, training TextCategorizer models, troubleshooting errors (E050/E941 model errors, E927 version mismatch, memory issues), batch processing with nlp.pipe, or deploying models to production. Includes data preparation scripts, config templates, and FastAPI serving examples.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/spacy-nlp"],
+      "commands": [
+        "./commands/spacy-setup.md",
+        "./commands/extract-entities.md",
+        "./commands/classify-text.md",
+        "./commands/train-classifier.md",
+        "./commands/analyze-text.md",
+        "./commands/batch-nlp.md",
+        "./commands/create-taxonomy.md"
+      ],
+      "agents": [
+        "./agents/spacy-error-fixer.md",
+        "./agents/nlp-workflow-assistant.md",
+        "./agents/performance-optimizer.md"
+      ]
+    }
+  ]
+}
